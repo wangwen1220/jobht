@@ -1,0 +1,18 @@
+{
+  "name": "jobht",
+  "title": "高才网",
+  "version": "0.1.0",
+  "author": "Steven <wangwen1220@gmail.com>",
+  "description": "中国高级人才招聘网站",
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-contrib-stylus": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-cssmin": "*",
+    "grunt-contrib-clean": "*",
+    "grunt-contrib-copy": "*",
+    "grunt-cmd-transport": "*",
+    "grunt-cmd-concat": "*"
+  }
+}

@@ -1,0 +1,373 @@
+@import 'base-debug.css';
+@charset 'utf-8';
+/* Stylus
+============================================================================= */
+/* Global
+============================================================================= */
+body {
+  color: #333;
+  font: 12px/1.5 '宋体';
+  background: #f8f8f8;
+}
+a,
+a:link {
+  color: #2c468c;
+}
+/* Remove the gap between images and the bottom of their containers */
+img {
+  vertical-align: middle;
+}
+/* Allow only vertical resizing of textareas */
+textarea {
+  resize: vertical;
+}
+/* A hack for HTML5 contenteditable attribute on mobile */
+textarea[contenteditable] {
+  -webkit-appearance: none;
+}
+/* Helper
+========================================================================== */
+/* Clearfix helper | Used to contain floats */
+.clearfix:before,
+.clearfix:after {
+  content: '';
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  *zoom: 1;
+}
+/* js placeholder style */
+.placeholder {
+  font-weight: normal !important;
+}
+/* 三角 */
+.arrow {
+  display: inline-block;
+  border: 4px solid #fff;
+  width: 0;
+  height: 0;
+  line-height: 0;
+  vertical-align: middle;
+}
+.arrow-up {
+  border-bottom-color: #444;
+}
+.arrow-down {
+  border-top-color: #444;
+}
+.arrow-left {
+  border-right-color: #444;
+}
+.arrow-right {
+  border-left-color: #444;
+}
+/* TPL
+============================================================================= */
+/*
+@name: w-cntbox
+@overview: 带边框和背景的内容模块
+@require: null
+*/
+/* Layout
+========================================================================== */
+.wrap {
+  margin: 0 auto;
+  width: 1000px;
+  *zoom: 1;
+}
+.wrap:before,
+.wrap:after {
+  content: '';
+  display: table;
+}
+.wrap:after {
+  clear: both;
+}
+/* Header */
+#header {
+/*padding: 25px 0 24px;*/
+  height: 80px;
+  border-bottom: 1px solid #3c3c3c;
+  text-align: right;
+  background: #353738;
+}
+#header h1 {
+  float: left;
+  margin-top: 25px;
+}
+#header nav {
+  margin-top: 35px;
+  color: #555;
+}
+#header nav a {
+  color: #fff;
+}
+/* nav */
+#nav {
+  border-bottom: 3px solid #e1e1e1;
+  background: #2b2b2b;
+}
+#nav ul,
+#nav li {
+  float: left;
+}
+#nav li a {
+  display: block;
+/*padding: 0 35px;*/
+  width: 120px;
+  height: 49px;
+  color: #fff;
+  border-right: 1px solid #3c3c3c;
+  text-align: center;
+  font: 15px/49px '微软雅黑', '黑体';
+}
+#nav li:last-child a {
+  border: none;
+}
+#nav li a:hover,
+#nav li a.on {
+  background: #000;
+  text-decoration: none;
+}
+#nav .tel {
+  float: right;
+  color: #fff;
+  line-height: 49px;
+}
+/** 注册页 **/
+/* ========== jquery-validform =========== */
+.Validform_checktip {
+  display: block;
+  margin-top: 8px;
+/*padding: 0 8px;*/
+  color: #999;
+  font-size: 14px;
+/*background: #ccc;*/
+}
+.Validform_right {
+  display: none;
+  color: #71b83d;
+}
+.Validform_wrong {
+  color: #c00;
+}
+/* Media Queries
+========================================================================== */
+@media only screen and (min-width: 800px) {
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),only screen and (min-resolution: 144dpi) {
+}
+/**
+ * This file is compiled based on offical documentation at
+ * http://learnboost.github.io/stylus/ to test highlighting
+ */
+@import "test.css";
+@charset "utf-8";
+@font-face {
+  font-family: Ubuntu, sans-serif;
+  src: url("fonts/pompadur.ttf");
+}
+@media screen and (max-width: 500px) {
+  a {
+    color: #fff;
+  }
+}
+a {
+  color: #f00;
+  top: 0;
+}
+b {
+  color: #fff;
+}
+i {
+  color: #fff;
+}
+body {
+  color: #fff;
+  color: #fff;
+  color: rgba(255,255,255,0.267);
+  color: rgba(255,255,255,0.267);
+  color: #ffff7f;
+  color: #171717;
+  color: rgba(23,23,23,0.4);
+  color: #48382d;
+  color: rgba(72,56,45,0.4);
+}
+a {
+  top: 0;
+  top: 0;
+  top: 0;
+  top: 0;
+  -webkit-transition: arguments;
+  -moz-transition: arguments;
+  -webkit-box-shadow: 0 1px 1px #fff, 0 0 4px rgba(0,0,0,0.4);
+  -moz-box-shadow: 0 1px 1px #fff, 0 0 4px rgba(0,0,0,0.4);
+  box-shadow: 0 1px 1px #fff, 0 0 4px rgba(0,0,0,0.4);
+  background-image: linear-gradient(top, #fff, #ccc);
+}
+a:nth-child(2n+1):not(:dir(rtl))::after:lang(fsd):active {
+  color: #f00;
+}
+a {
+  color: #fff;
+}
+*,
+*.test,
+*#test {
+  color: #fff;
+}
+[a=bb],
+[a~=bb],
+[a|=bb],
+[a="bb"],
+[a='bb'],
+[xaxsdx=sdf],
+[a=xsxdfx] {
+  color: #f00;
+}
+body {
+  top: 10 + 5;
+}
+html,
+body {
+  -webkit-background-clip: border-box;
+}
+html font,
+body font {
+  color: #f00;
+}
+html h1s,
+body h1s {
+  text-decoration: none;
+}
+html h2,
+body h2 {
+  color: #000;
+}
+body.someclass#someid {
+  font: normal 18px/30px OpenSans, Verdana, sans-serif;
+}
+textarea,
+input {
+  border: 1px solid #fff;
+}
+a {
+  font-size: 10px;
+  left: 15px;
+}
+header {
+  font-size: 10px;
+  left: 15px;
+}
+header body,
+header {
+  top: 0;
+}
+.block {
+  top: 0;
+}
+.block:hover {
+  top: 0;
+}
+.block.test {
+  top: 0;
+}
+.block.test_modifier {
+  top: 0;
+}
+.block#test {
+  top: 0;
+}
+header.block {
+  top: 0;
+}
+footer .block {
+  top: 0;
+}
+hash['nested'].somekey = true:focus,
+hash.nested['somekey'] = true:focus,
+input[type=text]:focus {
+  text-align: center;
+}
+a {
+/* */
+  font-family6fsd: #ccc sdfs;
+}
+.foo {
+  background-image: url("../5.png");
+  background-image: url("../test.jpg");
+}
+.bar {
+  color: #f00;
+}
+.bar {
+  background: #000;
+}
+@-moz-keyframes myfirst {
+  0% {
+    background: #f00;
+  }
+
+  50% {
+    background: #f00;
+  }
+
+  100% {
+    background: #ff0;
+  }
+}
+@-webkit-keyframes myfirst {
+  0% {
+    background: #f00;
+  }
+
+  50% {
+    background: #f00;
+  }
+
+  100% {
+    background: #ff0;
+  }
+}
+@-o-keyframes myfirst {
+  0% {
+    background: #f00;
+  }
+
+  50% {
+    background: #f00;
+  }
+
+  100% {
+    background: #ff0;
+  }
+}
+@-ms-keyframes myfirst {
+  0% {
+    background: #f00;
+  }
+
+  50% {
+    background: #f00;
+  }
+
+  100% {
+    background: #ff0;
+  }
+}
+@keyframes myfirst {
+  0% {
+    background: #f00;
+  }
+
+  50% {
+    background: #f00;
+  }
+
+  100% {
+    background: #ff0;
+  }
+}

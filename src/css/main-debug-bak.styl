@@ -1,0 +1,415 @@
+@import 'base-debug.css';
+@charset 'utf-8';
+
+/* Stylus
+============================================================================= */
+vendor(prop, args)
+  -webkit-{prop} args
+  -moz-{prop} args
+  {prop} args
+
+border-radius()
+  vendor('border-radius', arguments)
+
+box-shadow()
+  vendor('box-shadow', arguments)
+
+/* Global
+============================================================================= */
+body {
+  color: #333;
+  font: 12px/1.5 '宋体';
+  background: #f8f8f8;
+}
+a, a:link {
+  color: #2C468C;
+}
+
+/* Remove the gap between images and the bottom of their containers */
+img {
+  vertical-align: middle;
+}
+
+/* Allow only vertical resizing of textareas */
+textarea {
+  resize: vertical;
+}
+
+/* A hack for HTML5 contenteditable attribute on mobile */
+textarea[contenteditable] {
+  -webkit-appearance: none;
+}
+
+/* Helper
+========================================================================== */
+/* Clearfix helper | Used to contain floats */
+.clearfix:before,
+.clearfix:after {
+  content: '';
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  *zoom: 1;
+}
+
+/* js placeholder style */
+.placeholder {
+  font-weight: normal !important;
+}
+
+/* 三角 */
+.arrow {
+  display: inline-block;
+  border: 4px solid #fff;
+  width: 0;
+  height: 0;
+  line-height: 0;
+  vertical-align: middle;
+}
+.arrow-up {
+  border-bottom-color: #444;
+}
+.arrow-down {
+  border-top-color: #444;
+}
+.arrow-left {
+  border-right-color: #444;
+}
+.arrow-right {
+  border-left-color: #444;
+}
+
+/* TPL
+============================================================================= */
+/*
+@name: w-cntbox
+@overview: 带边框和背景的内容模块
+@require: null
+*/
+
+
+
+
+
+/* Layout
+========================================================================== */
+.wrap {
+  margin: 0 auto;
+  width: 1000px;
+  *zoom: 1;
+}
+.wrap:before,
+.wrap:after {
+  content: '';
+  display: table;
+}
+.wrap:after {
+  clear: both;
+}
+
+/* Header */
+#header {
+  /*padding: 25px 0 24px;*/
+  height: 80px;
+  border-bottom: 1px solid #3C3C3C;
+  text-align: right;
+  background: #353738;
+}
+#header h1 {
+  float: left;
+  margin-top: 25px;
+}
+#header nav {
+  margin-top: 35px;
+  color: #555;
+}
+#header nav a {
+  color: #fff;
+}
+
+/* nav */
+#nav {
+  border-bottom: 3px solid #E1E1E1;
+  background: #2B2B2B;
+}
+#nav ul, #nav li {
+  float: left;
+}
+#nav li a {
+  display: block;
+  /*padding: 0 35px;*/
+  width: 120px;
+  height: 49px;
+  color: #fff;
+  border-right: 1px solid #3C3C3C;
+  text-align: center;
+  font: 15px/49px '微软雅黑','黑体';
+}
+#nav li:last-child a {
+  border: none;
+}
+#nav li a:hover,
+#nav li a.on {
+  background: #000;
+  text-decoration: none;
+}
+#nav .tel {
+  float: right;
+  color: #fff;
+  line-height: 49px;
+}
+
+/** 注册页 **/
+
+
+/* ========== jquery-validform =========== */
+.Validform_checktip {
+  display: block;
+  margin-top: 8px;
+  /*padding: 0 8px;*/
+  color: #999;
+  font-size: 14px;
+  /*background: #ccc;*/
+}
+.Validform_right {
+  display: none;
+  color: #71b83d;
+}
+.Validform_wrong {
+  color: #c00;
+}
+.Validform_loading {
+  /*background: url(../images/onLoad.gif) no-repeat left center;*/
+}
+.Validform_error {
+  /*background-color: #ffe7e7;*/
+}
+
+/* Media Queries
+========================================================================== */
+@media only screen and (min-width: 800px) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+     only screen and (min-resolution: 144dpi) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+
+
+/**
+ * This file is compiled based on offical documentation at
+ * http://learnboost.github.io/stylus/ to test highlighting
+ */
+
+// @at-rules
+@import "test.css";
+@charset "utf-8";
+@font-face {
+    font-family: Ubuntu, sans-serif;
+    src: url('fonts/pompadur.ttf');
+}
+
+// animation
+@keyframes myfirst {
+  from {
+    background: red;
+  }
+  50% {
+    background red
+  }
+  to {
+    background: yellow;
+  }
+}
+
+// media query
+@media screen and (max-width: 500px) {
+  a {
+    color: #fff;
+  }
+}
+
+// one-line code
+a { color: red; top: 0; } b { color: #fff; } i { color: #fff; }
+
+// Colors
+body {
+  color: #fff;
+  color: #ffffff;
+  color: #fff4;
+  color: #ffffff44;
+  color: rgb(100%, 100%, 50%);
+  color: rgb(23, 23, 23);
+  color: rgba(23, 23, 23, 0.4);
+  color: hsl(23, 23, 23);
+  color: hsla(23, 23, 23, 0.4);
+}
+
+// Properties
+a {
+  top: 0
+  top:0
+  top :0
+  top 0
+
+  // tabs instead of spaces as delimiters
+  -webkit-transition  : arguments
+  -moz-transition arguments
+
+  // multiline property, comma separated
+  box-shadow: 0 1px 1px #fff,
+              0 0 4px rgba(0,0,0,0.4)
+
+  // multiline function call
+  background-image: linear-gradient(
+    top,
+    #fff,
+    #ccc
+  )
+}
+
+// pseudo-elements and selectors
+a:nth-child(2n+1):not(:dir(rtl))::after:lang(fsd):active {
+  color: red;
+}
+
+// Literal css
+@css {
+  a {
+    color: #fff;
+  }
+}
+
+// Universal selector
+*, *.test, *#test
+  color: white
+
+// tag attributes selectors
+[a=bb], [a~=bb], [a|=bb], [a="bb"], [a='bb'],
+[{x}a{x}sd{x}=sdf], [a={x}s{x}df{x}]
+  color: red
+
+// Escaping
+body
+  top 10 \+ 5
+
+// Multiple selectors separated by line break
+html,
+body
+  font
+    color red
+  // vendor prefix
+  -webkit-background-clip: border-box
+
+  // ending in interpolation
+  h1{s} {
+    text-decoration: none;
+  }
+  // no space before braces
+  h2{
+    color black
+  }
+
+// Compound selectors
+body.someclass#someid
+  font normal 18px/30px OpenSans, Verdana, sans-serif
+
+// Multiple selectors separated by comma
+textarea, input
+  border 1px solid #fff
+
+// Multiple properties separated by line
+a
+  font-size 10px
+  left 15px
+
+// Multiple properties separated by semicolon
+header
+  font-size 10px; left 15px;
+
+// Ambigious property / selector
+// when with comma should be recognized as a selector
+header body,
+header
+  top 0
+
+// Parent reference, including BEM-style expansion
+.block
+  &
+    top 0
+  &:hover
+    top 0
+  &.test
+    top 0
+    &_modifier
+      top 0
+  &#test
+    top 0
+  header&
+    top 0
+  footer &
+    top 0
+
+// Variable assignments
+i = ''
+n ?= 5
+test := 5
+
+// Hashes
+hash = {
+  somekey: true
+  // commented: true
+  'escaped key 1' : 'value'
+  "escaped key 2" : 'value'
+}
+hashOneLine = { somekey: true }
+hashEmpty = {}
+hash['key'] = 'value'
+hash['other'] = hash['key']
+hash.somekey = false
+hash.nested = { somekey: false }
+hash.nested.somekey = true
+hash['nested'].somekey = true
+hash.nested['somekey'] = true
+
+// making sure this isn't considered an assignment
+input[type=text] {
+  &:focus {
+    text-align: center;
+  }
+}
+
+// Complex case of a property
+a
+  /* */fo{i}nt-family{n+1}fsd #ccc  sdfs // 213px
+
+// Function definition and control structures
+somefunction(a, b = 16px, c = b, d...)
+  if c
+    top b
+  else
+    return a
+  for x, y in somedictionary
+    &_{x}_{y}
+      color x if y
+
+// built-in functions
+.foo
+  test = 5
+  jpg = "png"
+  background-image url(../test.jpg) // will yeild url("../5.png")
+  background-image url("../test.jpg")
+
+// Placeholder selectors
+$foo
+  color red
+
+// Extending
+.bar
+  @extend $foo
+  background: #000
